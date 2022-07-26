@@ -20,7 +20,14 @@ int main(int argc, char *argv[])
   assert(sscanf(argv[2],"%d",&y_nm)==1);
   assert(sscanf(argv[3],"%lf",&fF)==1);
 
-  printf("cpp=%dnm,height=%dnm,fF/um=%f\n",x_nm,y_nm,fF);
+  //printf("cpp=%dnm,height=%dnm,fF/um=%f\n",x_nm,y_nm,fF);
+
+  // we parse files of the format:
+  // # wcap ADDER_24_Z: ( 27 120 ) -> ( 21 127 ) ( 21 131 ) ( 23 136 ) 0.000239988
+  // corresponding to a wire name, a source node, and dest nodes
+  // the program does steiner routes on them to determine a total route distance in nm
+  // and a capacitance number is outputted
+  // the digits after the parens are ignored
   
     int d=0;
     int x[MAXD], y[MAXD];
