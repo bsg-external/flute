@@ -18,7 +18,7 @@ int main()
     flutetree = flute(d, x, y, ACCURACY);
     printf("# FLUTE wirelength = %d\n", flutetree.length);
 
-    printtree(flutetree);
+    //printtree(flutetree);
 
     plottree_matplotlib(flutetree);
     printf("plt.scatter([");
@@ -36,9 +36,9 @@ int main()
     printf("]);");
 
     printf("plt.show()\n");
-    plottree(flutetree);
+    //plottree(flutetree);
 
     
-    flutewl = flute_wl(d, x, y, ACCURACY);
+    //flutewl = flute_wl(d, x, y, ACCURACY);
     //printf("FLUTE wirelength (without RSMT construction) = %d\n", flutewl);
 }

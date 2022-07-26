@@ -1,9 +1,12 @@
 CC = gcc -O3
 
-all: flute-net flute-ckt rand-pts
+all: flute-net flute-ckt rand-pts flute-wcap
 
 flute-net: flute-net.c flute.o
-	$(CC) -o flute-net flute-net.c flute.o 
+	$(CC) -o flute-net flute-net.c flute.o
+
+flute-wcap: flute-wcap.c flute.o
+	$(CC) -o flute-wcap flute-wcap.c flute.o 
 
 flute-ckt: flute-ckt.c flute.o \
 	bookshelf_IO.c bookshelf_IO.h memAlloc.c memAlloc.h
